@@ -6,7 +6,7 @@ ln -s `pwd` /tmp/catkin_ws/src/enable_cxx11_support
 ln -s `pwd`/test/src /tmp/catkin_ws/src/otherss
 
 cd /tmp/catkin_ws/src
-git clone https://github.com/ros/catkin.git
+git clone https://github.com/ros/catkin.git --depth 1
 ./catkin/bin/catkin_init_workspace
 cd ..
 ./src/catkin/bin/catkin_make --force-cmake
