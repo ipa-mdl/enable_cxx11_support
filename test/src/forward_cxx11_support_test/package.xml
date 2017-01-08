@@ -1,0 +1,13 @@
+<package format="2">
+  <name>forward_cxx11_support_test</name>
+  <version>0.0.0</version>
+  <description>test forwarded C++11 support</description>
+  <author>Somebody</author>
+  <maintainer email="Somebody@somewhere.org">Somebody</maintainer>
+  <license>Unknown</license>
+  <url/>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>enable_cxx11_support_test</build_depend>
+</package>

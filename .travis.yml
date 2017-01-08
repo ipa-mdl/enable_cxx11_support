@@ -1,0 +1,28 @@
+language: python
+
+addons:
+  apt:
+    packages:
+      - git
+      - g++
+      - python
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-4.7
+      env: CXX=/usr/bin/g++-4.7
+
+install: 
+  - pip install catkin-pkg empy
+
+script:
+  - cmake --version
+  - test/test.sh
