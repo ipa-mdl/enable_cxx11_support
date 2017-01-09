@@ -4,14 +4,45 @@ addons:
   apt:
     packages:
       - git
-      - g++
-      - python
 
 matrix:
   include:
+    - os: linux # test CMake < 2.8.12
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-4.7
+      env: CXX=/usr/bin/g++-4.7
+    - os: linux
+      addons:
+        apt:
+          packages:
+            - g++-4.8
+      dist: trusty
+      sudo: false
+      env: CXX=/usr/bin/g++-4.8
     - os: linux
       dist: trusty
       sudo: false
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-4.9
+      env: CXX=/usr/bin/g++-4.9
+    - os: linux
+      dist: trusty
+      sudo: false
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-5
+      env: CXX=/usr/bin/g++-5
     - os: linux
       dist: trusty
       sudo: false
@@ -22,14 +53,16 @@ matrix:
           packages:
             - g++-6
       env: CXX=/usr/bin/g++-6
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-4.7
-      env: CXX=/usr/bin/g++-4.7
+    #- os: linux
+    #  dist: trusty
+    #  sudo: false
+    #  addons:
+    #    apt:
+    #      sources:
+    #        - ubuntu-toolchain-r-test
+    #      packages:
+    #        - g++-7
+    #  env: CXX=/usr/bin/g++-7
 
 install: 
   - pip install catkin-pkg empy
