@@ -11,6 +11,17 @@ matrix:
   include:
     - os: linux
       dist: trusty
+      sudo: false
+    - os: linux
+      dist: trusty
+      sudo: false
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-6
+      env: CXX=/usr/bin/g++-6
     - os: linux
       addons:
         apt:
