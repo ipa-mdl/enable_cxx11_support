@@ -3,7 +3,7 @@
 rm -rf /tmp/catkin_ws/src
 mkdir -p /tmp/catkin_ws/src
 ln -s `pwd` /tmp/catkin_ws/src/enable_cxx11_support
-ln -s `pwd`/test/src /tmp/catkin_ws/src/otherss
+ln -s `pwd`/test/src /tmp/catkin_ws/src/others
 
 cd /tmp/catkin_ws/src
 git clone https://github.com/ros/catkin.git --depth 1
