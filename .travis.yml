@@ -63,7 +63,92 @@ matrix:
     #      packages:
     #        - g++-7
     #  env: CXX=/usr/bin/g++-7
-
+    - os: linux
+      dist: trusty
+      sudo: false
+      addons:
+        apt:
+          packages:
+            - clang++-3.3
+      env:
+        - CXX=/usr/bin/clang++
+        - CXX_V: 3.3
+    - os: linux
+      dist: trusty
+      sudo: false
+      addons:
+        apt:
+          packages:
+            - clang++-3.4
+      env:
+        - CXX=/usr/bin/clang++
+        - CXX_V: 3.4
+    - os: linux
+      dist: trusty
+      sudo: false
+      addons:
+        apt:
+          packages:
+            - clang++-3.5
+      env:
+        - CXX=/usr/bin/clang++-3.5
+    - os: linux
+      dist: trusty
+      sudo: false
+      addons:
+        apt:
+          packages:
+            - clang++-3.6
+      env:
+        - CXX=/usr/bin/clang++-3.6
+    - os: linux
+      dist: trusty
+      sudo: false
+      addons:
+        apt:
+          sources:
+             - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.7 main'
+               key_url: 'http://llvm.org/apt/llvm-snapshot.gpg.key'
+          packages:
+            - clang++-3.7
+      env:
+        - CXX=/usr/bin/clang++-3.7
+    - os: linux
+      dist: trusty
+      sudo: false
+      addons:
+        apt:
+          sources:
+             - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.8 main'
+               key_url: 'http://llvm.org/apt/llvm-snapshot.gpg.key'
+          packages:
+            - clang++-3.8
+      env:
+        - CXX=/usr/bin/clang++-3.8
+    - os: linux
+      dist: trusty
+      sudo: false
+      addons:
+        apt:
+          sources:
+             - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.9 main'
+               key_url: 'http://llvm.org/apt/llvm-snapshot.gpg.key'
+          packages:
+            - clang++-3.9
+      env:
+        - CXX=/usr/bin/clang++-3.9
+    - os: linux
+      dist: trusty
+      sudo: false
+      addons:
+        apt:
+          sources:
+             - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty main'
+               key_url: 'http://llvm.org/apt/llvm-snapshot.gpg.key'
+          packages:
+            - clang++-4.0
+      env:
+        - CXX=/usr/bin/clang++-4.0
 install: 
   - pip install catkin-pkg empy
 
