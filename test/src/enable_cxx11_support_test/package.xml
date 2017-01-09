@@ -11,4 +11,8 @@
 
   <build_depend>enable_cxx11_support</build_depend>
   <build_export_depend>enable_cxx11_support</build_export_depend>
+
+  <build_depend>enable_cxx_thread_support</build_depend>
+  <build_export_depend>enable_cxx_thread_support</build_export_depend>
+
 </package>
