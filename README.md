@@ -29,5 +29,5 @@ To enable support for your package:
 To forward the support to dependent packages:
 
 1. enable C++11 support (as described above)
-2. add `<build__export_depend>enable_cxx11_support</build__export_depend>` (`<run_depend>enable_cxx11_support</run_depend>` for format V1) to your `package.xml`. 
+2. add `<build_export_depend>enable_cxx11_support</build_export_depend>` (`<run_depend>enable_cxx11_support</run_depend>` for format V1) to your `package.xml`. 
 3. export it in your `CMakeLists.txt`:  `catkin_package(CATKIN_DEPENDS enable_cxx11_support)`
