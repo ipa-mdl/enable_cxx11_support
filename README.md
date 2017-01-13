@@ -2,6 +2,7 @@
 
 This package can be used to enable C++11 support in catkin projects and to forward the support to downstream packages as well.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7bb483a721a14bde8225c14e2d01fae2)](https://www.codacy.com/app/ipa-mdl/enable_cxx11_support?utm_source=github.com&utm_medium=referral&utm_content=ipa-mdl/enable_cxx11_support&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/ipa-mdl/enable_cxx11_support.svg?branch=master)](https://travis-ci.org/ipa-mdl/enable_cxx11_support)
 
 ## Motivation
